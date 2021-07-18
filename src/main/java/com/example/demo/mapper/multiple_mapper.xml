@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org//dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.Test2Dao">
+    <select id="multiple_choice" resultType="com.example.demo.structs.Multiple_Choice">
+        select * from multiple_choice
+    </select>
+    <select id="multiple_choiceById" resultType="com.example.demo.structs.Multiple_Choice">
+        select * from multiple_choice where id=#{id}
+    </select>
+    <insert id="multiple_choiceAdd" parameterType="com.example.demo.structs.Multiple_Choice">
+        insert into m_wrong(question,choice1,choice2,choice3,choice4,answer) values(#{question},#{choice1},#{choice2},#{choice3},#{choice4},#{answer})
+    </insert>
+    <select id="multiple_choice_w" resultType="com.example.demo.structs.Multiple_Choice">
+        select * from m_wrong
+    </select>
+    <select id="multiple_choice_wById" resultType="com.example.demo.structs.Multiple_Choice">
+        select * from m_wrong where id=#{id}
+    </select>
+    <delete id="multiple_choiceDelete" parameterType="int">
+        delete from m_wrong where id=#{id}
+    </delete>
+    <select id="m_w_count" resultType="int">
+        select count(*) from m_wrong
+    </select>
+    <select id="multiple_choice_cById" resultType="com.example.demo.structs.Multiple_Choice">
+        select * from m_collection where id=#{id}
+    </select>
+    <delete id="multiple_choice_cDelete" parameterType="int">
+        delete from m_collection where id=#{id}
+    </delete>
+    <insert id="multiple_choice_cAdd" parameterType="com.example.demo.structs.Multiple_Choice">
+        insert into m_collection(question,choice1,choice2,choice3,choice4,answer) values(#{question},#{choice1},#{choice2},#{choice3},#{choice4},#{answer})
+    </insert>
+</mapper>
