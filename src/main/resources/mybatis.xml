@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!-- Mybatis核心配置文件 -->
+<configuration>
+        <!--
+        别名配置
+        -->
+        <typeAliases>
+                <typeAlias type="com.whz.Dept" alias="Dept"/>
+                <typeAlias type="com.whz.User" alias="User"/>
+        </typeAliases>
+        <!-- 事务   、  数据源、  映射文件 -->
+        <!-- 配置开发环境
+          default：默认的环境
+        -->
+        <environments default="dev">
+                <!--id值就是默认的环境  -->
+                <environment id="dev">
+                        <!-- 配置事务管理 -->
+                        <transactionManager type="JDBC"></transactionManager>
+
+                        <!-- 配置数据源 type：池化的-->
+                        <dataSource type="pooled">
+                                <property name="driver"
+                                          value="com.mysql.jdbc.Driver"/>
+
+                                <property name="url"
+                                          value="jdbc:mysql://localhost:3306/ssm2021?characterEncoding=utf-8"/>
+
+                                <property name="username" value="root"/>
+                                <property name="password" value="asdf"/>
+
+                        </dataSource>
+                </environment>
+        </environments>
+
+        <!--加载MyBatis核心配置文件要指定sql映射文件位置-->
+        <mappers>
+                <mapper resource="mappers/UserMapper.xml"></mapper>
+                <mapper resource="mappers/DeptMapper.xml"></mapper>
+        </mappers>
+
+</configuration>

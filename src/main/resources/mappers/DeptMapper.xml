@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE mapper
+                PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        <!--
+        namespace:命名空间  作为多个mapper文件的唯一标识
+        -->
+<mapper namespace="com.whz.mapper.DeptMapper">
+    <!--
+    添加数据
+    -->
+    <insert id="addDeptInfo" parameterType="com.whz.Dept">
+        insert into tb_dept(id,deptName,deptLoc)
+        values (null ,#{deptName},#{deptLoc})
+    </insert>
+
+    <delete id="deleteDept" parameterType="com.whz.Dept">
+        delete from tb_dept
+        where  id=#{id}
+    </delete>
+
+    <update id="changeDeptById" parameterType="com.whz.Dept">
+        update tb_dept set deptName=#{deptName},deptLoc=#{deptLoc}
+        where id=#{id}
+    </update>
+
+    <select id="selectDepts" resultType="com.whz.Dept">
+        select * from tb_dept
+    </select>
+</mapper>
