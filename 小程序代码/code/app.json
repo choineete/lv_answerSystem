@@ -1,0 +1,61 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/person/person",
+    "pages/login/login"
+  ],
+  "subpackages": [
+    {
+      "root": "packageA",
+      "pages": [
+        "pages/logs/logs",
+        "pages/practice/practice",
+        "pages/collection/collection",
+        "pages/error_main/error",
+        "pages/prc_all/prc_all",
+        "pages/random_inn/random_inn",
+        "pages/ordinal_inn/ordinal_inn",
+        "pages/allprc_inn/allprc_inn",
+        "pages/collection_inn/collection_inn",
+        "pages/error_inn/error_inn"
+      ]
+    },
+    {
+      "root": "packageB",
+      "pages": [
+        "pages/echarts/echarts"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ff0000",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "小律刷题",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "borderStyle":"white",
+    "selectedColor":"#CDB03B",
+    "color": "#ffffff",
+    "backgroundColor": "#ff0000",
+    "list": [
+      {
+        "selectedIconPath": "pages/image/home.png",
+        "iconPath": "pages/image/home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+       
+        "selectedIconPath": "pages/image/my.png",
+        "iconPath": "pages/image/my.png",
+        "pagePath": "pages/person/person",
+        "text": "我的"
+      }
+    ]
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
+}

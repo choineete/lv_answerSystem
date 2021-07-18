@@ -1,0 +1,18 @@
+<!--pages/python/python.wxml-->
+<image class='background' src="/pages/image/index.png" mode="aspectFill"></image> 
+<view class="page">
+<view style="font-size:20px">    
+  {{area.question}}
+</view>
+<view style="font-size:20px"> 
+ 
+  正确答案是：{{answer}}
+</view>
+  <view class='page_ft'>
+    <view class='mybutton'>
+      <button bindtap="sub5">下一题</button>
+      <text bindtap='outTest' class="toindex-btn">收藏</text>
+    </view>
+  </view>
+</view>
+   

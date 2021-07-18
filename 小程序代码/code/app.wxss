@@ -1,0 +1,19 @@
+/**app.wxss**/
+
+page {
+  font-family:Cursive;
+  font-size: 40rpx;
+}
+.main {
+  height: 100vh;
+  display: flex;
+  
+  flex-direction: column;
+  align-items: center;
+  font-size: 100px;
+  /*
+  justify-content: center;
+  padding: 0 0 200rpx;
+  
+  box-sizing: border-box;*/
+}

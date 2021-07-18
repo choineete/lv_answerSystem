@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="main">
+  <view style=" center center no-repeat; width:100%; height:100%; background-size: cover; top:50px; justify-content: center;">
+  
+    <view class="usermotto">
+      <text class="masked" style="text_align: center">{{motto}}</text>
+      <navigator style="color: #CDB03B;padding: 40rpx" url="/packageA/pages/random_sin/random_sin" hover-class="navigator-hover">单选题</navigator>
+
+      <navigator style="color: #CDB03B;padding: 40rpx" url="/packageA/pages/random_mul/random_mul" hover-class="navigator-hover">多选题</navigator>
+
+
+
+      <navigator style="color: #CDB03B;padding: 40rpx" url="/packageA/pages/random_jud/random_jud" hover-class="navigator-hover">判断题</navigator>
+
+    </view>
+  </view>
+</view>

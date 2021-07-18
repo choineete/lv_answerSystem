@@ -1,0 +1,32 @@
+<!--pages/python/python.wxml-->
+<image class='background' src="/pages/image/index.png" mode="aspectFill"></image> 
+<view class="page">
+<view style="font-size:20px">    
+  {{area.question}}
+</view>
+  <button     bindtap="sub1"
+            style="position:relative;right:0; padding:5%;width:100%;height:50%;font-size:80%;background-color:rgba(255,255,255,0);color:000000;text-align:left;font-size:15px">
+            {{area.choice1}}
+  </button>
+  <button bindtap="sub2"
+            style="position:relative;right:0; padding:5%;width:100%;height:50%;font-size:80%;background-color:rgba(255,255,255,0);color:000000;text-align:left;font-size:15px">
+            {{area.choice2}}
+  </button>
+  <button bindtap="sub3"
+            style="position:relative;right:0; padding:5%;width:100%;height:50%;font-size:80%;background-color:rgba(255,255,255,0);color:000000;text-align:left;font-size:15px">
+            {{area.choice3}}
+  </button>
+  <button bindtap="sub4"
+            style="position:relative;right:0; padding:5%;width:100%;height:50%;font-size:80%;background-color:rgba(255,255,255,0);color:000000;text-align:left;font-size:15px">
+            {{area.choice4}}
+  </button>
+
+  <view class='page_ft'>
+    <view class='mybutton'>
+      <button bindtap="sub5">下一题</button>
+      <button bindtap="sub">移除此题</button>
+      <text bindtap='outTest' class="toindex-btn">收藏</text>
+    </view>
+  </view>
+</view>
+   
